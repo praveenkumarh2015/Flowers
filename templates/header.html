@@ -1,0 +1,166 @@
+<div class="modal fade" id="logonBox" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span>&times;</span>
+						</button>
+						<h4 class="modal-title">Sign In</h4>
+					</div>
+
+					<div class="modal-body">
+						<div>
+							<ul class="nav nav-pills">
+								<li class="active">
+									<a href="#signin" data-toggle="tab" data-caption="Sign In">Sign In
+									</a>
+								</li>
+
+								<li>
+									<a href="#signup" data-toggle="tab" data-caption="Sign Up">Sign Up
+									</a>
+								</li>
+							</ul>
+
+							<div class="tab-content">
+								<div class="tab-pane active" id="signin">
+
+									<form name="form" style="padding-top: 5px">
+                    					<div class="form-group"  class="form-control" id="userName" placeholder="User Name">
+
+                    					<input type="text" class="form-control" id="userName" placeholder="User Name" name="text"  required />
+
+                    					</div>
+
+                						<div class="form-group"  class="form-control" id="password" placeholder="Password">
+
+                      					<input type="password" class="form-control" id="password" placeholder="Password" name="text"  required />
+
+                						</div>
+   
+                    					<button type="submit" class="btn btn-primary btn-large" >Submit</button>
+                					</form>
+
+								</div>
+
+								<div class="tab-pane" id="signup">
+									<form style="padding-top: 5px">
+										<div class="form-group">
+											<input type="text" class="form-control" id="yourName" placeholder="Your Full Name" >
+										</div>
+
+										<div class="form-group">
+											<input type="text" class="form-control" id="yourUserName" placeholder="Desired User Name" >
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="yourEmail" placeholder="Your Email Id" >
+										</div>
+
+										<div class="form-group">
+											<input type="password" class="form-control" id="yourPwd" placeholder="Password" >
+										</div>
+
+										<div class="form-group">
+											<input type="password" class="form-control" id="confirmPwd" placeholder="Confirm Password" >
+										</div>
+
+										<button type="button" class="btn btn-round  btn-primary btn-block" id="doLogon" >Sign Up
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-round btn-primary" data-dismiss="modal"> Cancel</button>
+					</div>
+				</div>
+		</div>
+</div>
+
+
+<div id="navbar-main">
+<nav class="navbar navbar-inverse navbar-fixed-top ">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#/!home" class="navbar-brand scroll">
+				<span class="icon icon-flower"></span> 
+			Flowers
+			</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+
+			<li> 
+				<a href="#/!home" class="scroll"> 
+					<span class="glyphicon glyphicon-home"></span> Home
+				</a> 
+			</li>
+
+			<li> 
+				<a href="#!about" class="scroll">
+					<span class="glyphicon glyphicon-leaf"></span> About Naturals
+				</a> 
+			</li>
+
+			<li>
+				<a href="#!needs" class="scroll">
+					<span class="glyphicon glyphicon-heart"></span> Needs
+				</a>
+			</li>
+
+			<li> 
+				<a href="#!gallery" class="scroll active">
+					<span class="glyphicon glyphicon-th-large"></span> Gallery
+				</a> 
+			</li>
+
+			<li> 
+				<a href="#!contact" class="scroll active">
+					<span class="glyphicon glyphicon-earphone"></span> Contact
+				</a> 
+			</li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+			<li>
+		<a href="#login" id="logonLink"><span class="glyphicon glyphicon-log-in" ></span> Login</a>
+	</li>
+	
+
+</ul>
+
+		
+		</div>
+	</div>
+</nav>
+</div>
+
+
+
+<script>
+	$('#logonLink').on('click', function(e) {
+	$('#logonBox').modal({
+		keyboard: false,
+		backdrop: 'static'
+	});
+});
+
+	$('#doLogon').on('click', function(e) {
+		alert('Thank you for Signing In');
+		$('#logonBox').modal('hide');
+	});
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+	var data = $(e.target).data('caption');
+	var modal = $('#logonBox');
+	modal.find('.modal-title').text(data);
+			  
+});
+</script>

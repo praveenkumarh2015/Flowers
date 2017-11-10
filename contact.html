@@ -1,0 +1,73 @@
+
+<div class="container" id="contact">
+	<div class="row white">
+	<h1 class=" text-center page-header">Contact</h1>
+		
+		<div class="col-md-4">
+			<h5 class="page-header"> 
+				<span class="fa fa-envelope-o fa-2x"></span> praveenkumar.h2015@vit.ac.in
+			</h5>
+	
+			<h5 class="page-header"> 
+				<span class="fa fa-external-link fa-2x"></span> http://praveen-kumar-h.cf
+			</h5>
+		</div>
+
+
+		<div class="col-md-4">
+			<form role="form">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Username" >
+				</div>
+
+				<div class="form-group">
+					<input type="email" class="form-control" placeholder="Email" >
+				</div>
+
+				<div class="form-group">
+					<textarea class="form-control" placeholder="Comments"  ></textarea>
+				</div>
+			</form>
+			<button class="btn btn-success btn-block">Submit</button>
+		</div>
+
+
+		<div class="col-md-offset-1 col-md-3">
+			<h5 class="page-header"> 
+				<span class="fa fa-envelope-o fa-2x"></span> praveenkumar.h2015@vit.ac.in
+			</h5>
+	
+			<h5 class="page-header"> 
+				<span class="fa fa-external-link fa-2x"></span> http://praveen-kumar-h.cf
+			</h5>
+
+		</div>
+
+		
+
+	</div>
+</div>
+
+
+
+<div id="map" class="animated rubberBand">
+
+</div>
+	
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByYCAedh05PKBu20rgAS79Xi3k8MZz6Go&callback=initMap">
+</script>
+    	
+
+<script>
+	function initMap() {
+        var chennai = {lat: 13.067439, lng: 80.237617};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: chennai
+        });
+        var marker = new google.maps.Marker({
+          position: chennai,
+          map: map
+        });
+}
+</script>

@@ -1,0 +1,89 @@
+<div class="call1">
+        <div class="vert-text">
+        <div id="contact-row-4" class="row animated pulse" >
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+
+				<div class="col-12 col-sm-2 with-hover-text">
+					<p><a target="_blank" href="#"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a></p>
+					<span class="hover-text hover-white">praveenkumar.h2015</span>
+					<span class="hover-text hover-white">@vit.ac.in</span>
+					</a>
+				</div>
+
+				<div class="col-12 col-sm-2 with-hover-text">
+					<p><a target="_blank" href="https://goo.gl/rvyoym"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a></p>
+					<span class="hover-text hover-white font-light ">praveen-kumar-4216b8109</span></a>
+				</div>
+
+				<div class="col-12 col-sm-2 with-hover-text">
+					<p><a target="_blank" href="http://praveen-kumar-h.cf"><i class="fa fa-link fa-3x" aria-hidden="true"></i></a></p>
+					<span class="hover-text hover-white font-light">praveen-kumar-h.cf</span></a>
+				</div>
+
+				<div class="col-12 col-sm-2 with-hover-text">
+					<p><a target="_blank" href="https://goo.gl/bFDdT7"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a></p>
+					<span class="hover-text hover-white font-light">Praveen.h1992</span></a>
+				</div>
+
+				<div class="col-12 col-sm-2 with-hover-text">
+					<p><a target="_blank" href="#"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a></p>
+					<span class="hover-text hover-white">praveenkumar.h2015</span>
+					<span class="hover-text hover-white">@vit.ac.in</span>
+					</a>
+				</div>
+
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			</div>
+
+        </div>
+</div>
+
+
+<script>
+		
+$(document).ready(function(e) {
+	$('.with-hover-text, .regular-link').click(function(e){
+		e.stopPropagation();
+	});
+	
+
+	$('.with-hover-text').hover(
+		function(e) {
+			$(this).css('overflow', 'visible');
+			$(this).find('.hover-text')
+				.show()
+				.css('opacity', 0)
+				.delay(200)
+				.animate(
+					{
+						paddingTop: '25px',
+						opacity: 1
+					},
+					'fast',
+					'linear'
+				);
+		},
+		function(e) {
+			var obj = $(this);
+			$(this).find('.hover-text')
+				.animate(
+					{
+						paddingTop: '0',
+						opacity: 0
+					},
+					'fast',
+					'linear',
+					function() {
+						$(this).hide();
+						$( obj ).css('overflow', 'hidden');
+					}
+				);
+		}
+	);
+	
+	var img_loaded = 0;
+	var j_images = [];
+	
+});
+
+</script>
